@@ -31,3 +31,13 @@ pause.addEventListener("click", function() {
 	console.log("Pause Video");
 });
 
+mute.addEventListener("click", function() {
+	if (document.getElementById("player1").muted == false) {
+		document.getElementById("player1").muted = true;
+		mute.textContent = "Unmute";
+	}
+	else {
+		document.getElementById("player1").muted = false;
+		mute.textContent = "Mute";
+	};
+});
