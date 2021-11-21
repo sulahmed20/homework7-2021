@@ -32,7 +32,13 @@ pause.addEventListener("click", function() {
 });
 
 slower.addEventListener("click", function() {
+	video.playbackRate *= 0.95;
+	console.log("New speed " + video.playbackRate);
+});
 
+faster.addEventListener("click", function() {
+	video.playbackRate /= 0.95;
+	console.log("New speed " + video.playbackRate);
 });
 
 skip.addEventListener("click", function() {
