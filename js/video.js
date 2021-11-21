@@ -31,6 +31,22 @@ pause.addEventListener("click", function() {
 	console.log("Pause Video");
 });
 
+slower.addEventListener("click", function() {
+
+});
+
+skip.addEventListener("click", function() {
+	console.log("Original location " + video.currentTime)
+	if ((video.duration - video.currentTime) <= 15) {
+		video.currentTime = 0;
+		console.log("New location " + video.currentTime)
+	}
+	else {
+		video.currentTime += 15;
+		console.log("New location " + video.currentTime)
+	};
+});
+
 mute.addEventListener("click", function() {
 	if (document.getElementById("player1").muted == false) {
 		document.getElementById("player1").muted = true;
