@@ -23,7 +23,7 @@ audio.slider = e.currentTarget.value / 100;
 play.addEventListener("click", function() {
 	video.play();
 	console.log("Play Video");
-	volume.textContent = video.volume;
+	volume.textContent = video.volume * 100 + "%";
 });
 
 pause.addEventListener("click", function() {
@@ -63,3 +63,18 @@ mute.addEventListener("click", function() {
 		mute.textContent = "Mute";
 	};
 });
+
+slider.addEventListener("input", function () {
+	video.volume = slider.value / 100;
+	volume.textContent = video.volume * 100 + "%";
+	console.log(video.volume);
+});
+
+vintage.addEventListener("click", function() {
+	video.className = "oldSchool";
+});
+
+orig.addEventListener("click", function() {
+	video.className = "video";
+});
+
